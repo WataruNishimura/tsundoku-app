@@ -9,10 +9,10 @@ void main() async{
   json = await loadJson();
   Map<String, dynamic> getData = jsonDecode(json);
   var books = getData['Items'];
-  var book = new Book.fromJson(books[0]);
+  var book = Book.fromJson(books[0]);
   print(books[0]);
 
-  print("Title: ${book.getTitle()}\nISBN: ${book.getIsbn()}");
+  print("Title: ${book.title}\nISBN: ${book.isbn}");
 }
 
 
